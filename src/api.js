@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const apiClient = axios.create({
   baseURL: 'https://www.mijia.games/api/ios/questionnaire',
+  // baseURL: 'http://localhost:8095/ios/questionnaire',
   withCredentials: false, 
   headers: {
     Accept: 'application/json',
