@@ -56,8 +56,9 @@ export default {
   methods: {
     assignGroup() {
       // 随机分配用户到对照组或详细讲解组
-      // this.group = Math.random() < 0.5 ? "detailed" : "brief";
-      this.introductionType = "brief";
+      this.introductionType = Math.random() < 0.5 ? "detailed" : "brief";
+      // this.introductionType = "brief";
+      console.info(this.introductionType)
       localStorage.setItem("introductionType", this.introductionType);
       this.introductionType = localStorage.getItem("introductionType")
     },
