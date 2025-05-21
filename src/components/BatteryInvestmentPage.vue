@@ -38,9 +38,9 @@
             <el-radio :value="'3-5万'">3-5万</el-radio>
           </el-radio-group>
         </el-form-item>
-        <el-form-item label="微信号" required>
+        <!-- <el-form-item label="微信号" required>
           <el-input v-model="form.wechat" placeholder="请输入您的微信号"></el-input>
-        </el-form-item>
+        </el-form-item> -->
         <div class="btn-container">
           <el-button type="primary" @click="handleSubmit" :loading="this.loading"
           :disabled="this.loading">结束答题</el-button>
@@ -61,7 +61,7 @@ export default {
       form: {
         carChoice: "",
         expectedEarnings: "",
-        wechat: "",
+        // wechat: "",
         uuid: localStorage.getItem("uuid"),
       },
       rules: {
@@ -71,9 +71,9 @@ export default {
         expectedEarnings: [
           { required: true, message: "请选择一个选项", trigger: "change" },
         ],
-        wechat: [
-          { required: true, message: "请输入您的微信号", trigger: "blur" },
-        ],
+        // wechat: [
+        //   { required: true, message: "请输入您的微信号", trigger: "blur" },
+        // ],
       },
     };
   },

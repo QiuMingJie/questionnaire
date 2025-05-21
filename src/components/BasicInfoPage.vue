@@ -25,7 +25,7 @@
             <el-radio :value="'不愿透露'">不愿透露</el-radio>
           </el-radio-group>
         </el-form-item>
-        <el-form-item label="教育背景：" required prop="education">
+        <!-- <el-form-item label="教育背景：" required prop="education">
           <el-radio-group v-model="form.education">
             <el-radio :value="'高中及以下'">高中及以下</el-radio>
             <el-radio :value="'专科'">专科</el-radio>
@@ -33,15 +33,15 @@
             <el-radio :value="'硕士研究生'">硕士研究生</el-radio>
             <el-radio :value="'博士研究生'">博士研究生</el-radio>
           </el-radio-group>
-        </el-form-item>
-        <el-form-item label="您的平均年收入(税前)：" required prop="income">
+        </el-form-item> -->
+        <!-- <el-form-item label="您的平均年收入(税前)：" required prop="income">
           <el-radio-group v-model="form.income">
             <el-radio :value="'学生无收入'">学生无收入</el-radio>
             <el-radio :value="'20万以下'">20万以下</el-radio>
             <el-radio :value="'20-50万'">20-50万</el-radio>
             <el-radio :value="'50万以上'">50万以上</el-radio>
           </el-radio-group>
-        </el-form-item>
+        </el-form-item> -->
         <el-form-item label="您拥有的车型：" required prop="carType">
           <el-radio-group v-model="form.carType">
             <el-radio :value="'纯电动汽车'">纯电动汽车</el-radio>
@@ -229,8 +229,8 @@ export default {
       form: {
         age: "",
         gender: "",
-        education: "",
-        income: "",
+        // education: "",
+        // income: "",
         carType: "",
         batteryCapacity: "",
         drivingExperience: "",
@@ -254,16 +254,16 @@ export default {
         gender: [
           { required: true, message: "请选择您的性别", trigger: "change" },
         ],
-        education: [
-          { required: true, message: "请选择您的教育背景", trigger: "change" },
-        ],
-        income: [
-          {
-            required: true,
-            message: "请选择您的平均年收入",
-            trigger: "change",
-          },
-        ],
+        // education: [
+        //   { required: true, message: "请选择您的教育背景", trigger: "change" },
+        // ],
+        // income: [
+        //   {
+        //     required: true,
+        //     message: "请选择您的平均年收入",
+        //     trigger: "change",
+        //   },
+        // ],
         carType: [
           { required: true, message: "请选择您拥有的车型", trigger: "change" },
         ],
