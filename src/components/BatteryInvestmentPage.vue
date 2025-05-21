@@ -52,7 +52,7 @@
   
 <script>
 import api from '@/api';
-
+import moment from "moment";
 export default {
   name: "NinthPage",
   data() {
@@ -61,6 +61,7 @@ export default {
       form: {
         carChoice: "",
         expectedEarnings: "",
+        finish_datetime:moment(new Date()).format("YYYY-MM-DD HH:mm:ss"),
         // wechat: "",
         uuid: localStorage.getItem("uuid"),
       },

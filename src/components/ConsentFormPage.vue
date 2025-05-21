@@ -66,7 +66,7 @@
   
   <script>
 import api from '@/api';
-
+import moment from "moment";
 
 export default {
   data() {
@@ -75,6 +75,7 @@ export default {
         name: "",
         date: new Date().toISOString().substr(0, 10), // 自动生成当前日期
         uuid: localStorage.getItem("uuid") || "", // 从localStorage中获取uuid
+        start_datetime:moment(new Date()).format("YYYY-MM-DD HH:mm:ss"),
       },
       loading: false,
     };
